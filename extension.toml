@@ -1,0 +1,15 @@
+id = "nix-language"
+name = "Nix Language"
+version = "0.0.1"
+schema_version = 1
+authors = ["Moritz Sanft <nix-zed@msanft.de>"]
+description = "❄️ Support for the Nix language"
+repository = "https://github.com/msanft/nix-zed"
+
+[grammars.nix]
+repository = "https://github.com/nix-community/tree-sitter-nix"
+commit = "b3cda619248e7dd0f216088bd152f59ce0bbe488"
+
+[language_servers.nixd]
+name = "Nixd"
+language = "Nix"

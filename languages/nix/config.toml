@@ -1,0 +1,13 @@
+name = "Nix"
+grammar = "nix"
+path_suffixes = ["nix"]
+line_comments = ["# "]
+autoclose_before = ";:.,=}])>` \n\t\""
+brackets = [
+    { start = "{", end = "}", close = true, newline = true },
+    { start = "[", end = "]", close = true, newline = false },
+    { start = "(", end = ")", close = true, newline = false },
+    { start = "${", end = "}", close = true, newline = false },
+    { start = "'", end = "'", close = true, newline = false, not_in = ["comment", "string"] },
+    { start = "\"", end = "\"", close = true, newline = false, not_in = ["comment", "string"] },
+]
